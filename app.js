@@ -1,13 +1,7 @@
 
-
-const helpers = require ("./helpers")
-const http = require ("http")
-
-const server = http.createServer((req, res) => {
-  res.end("hello world from node js")
+var express = require('express');
+var app = express();
+app.get('/', function(req, res){
+   res.send("Hello World!");
 });
-
-server.listen(3001);
-
-const total = helpers.sum(10, 200);
-console.log("TOTAL: ", total);
+app.listen(80, '172.31.39.248');
